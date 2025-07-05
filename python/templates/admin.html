@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administrador - Acompoamor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #c2185b;
+    }
+    form {
+      background: #ffe4ec;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="file"],
+    input[type="tel"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #c2185b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #a3154d;
+    }
+    .volver {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .volver a {
+      text-decoration: none;
+      background-color: #ccc;
+      padding: 10px 15px;
+      border-radius: 6px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Panel de Administrador - Acompoamor</h1>
+  <form method="POST" enctype="multipart/form-data">
+    <label>
+      Clave de administrador:
+      <input type="password" name="clave" required>
+    </label>
+
+    <label>
+      Cambiar imagen del especialista:
+      <input type="file" name="img_especialista">
+    </label>
+
+    <label>
+      Cambiar logo de la empresa:
+      <input type="file" name="img_logo">
+    </label>
+
+    <label>
+      Cambiar formulario en PDF:
+      <input type="file" name="formulario_pdf" accept="application/pdf">
+    </label>
+
+    <label>
+      Dirección del especialista:
+      <input type="text" name="direccion" value="{{ info['direccion'] }}">
+    </label>
+
+    <label>
+      Número celular del especialista:
+      <input type="tel" name="celular" value="{{ info['celular'] }}">
+    </label>
+
+    <label>
+      Correo electrónico del especialista:
+      <input type="email" name="correo" value="{{ info['correo'] }}">
+    </label>
+
+    <label>
+      Agregar imágenes de servicios (puede seleccionar varias):
+      <input type="file" name="servicios_imgs" multiple accept="image/*">
+    </label>
+
+    <button type="submit">Guardar Cambios</button>
+  </form>
+
+  <div class="volver">
+    <a href="{{ url_for('index') }}">Volver a la Página Principal</a>
+  </div>
+</body>
+</html>
