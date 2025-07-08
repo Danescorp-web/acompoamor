@@ -151,6 +151,11 @@
       padding: 1rem;
       background-color: var(--principal);
     }
+    .descripcion-formulario {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -189,6 +194,9 @@
 
     <section class="formulario">
       <h2>Formulario de Solicitud</h2>
+    <p class="descripcion-formulario">
+     Por favor completa este formulario para que podamos conocer mejor tu solicitud y darte un servicio adecuado a las necesidades de tu paciente.
+    </p>
       <input type="text" id="nombre" placeholder="Nombre completo" required>
       <input type="tel" id="telefono" placeholder="Teléfono" required>
       <textarea rows="4" id="mensaje" placeholder="Descripción del servicio requerido"></textarea>
@@ -199,7 +207,8 @@
         <button onclick="enviarWhatsapp()">Enviar Solicitud</button>
       </div>
       <div class="mensaje-instruccion">
-        Después de hacer clic en “Enviar Solicitud”, se abrirá WhatsApp con el mensaje preparado. Si no se muestra automáticamente, el mensaje ha sido copiado al portapapeles: puedes pegarlo manualmente en la línea de mensajes de WhatsApp o enviarnos directamente un mensaje dando clic en el ícono de WhatsApp.
+        Después de hacer clic en “Enviar Solicitud”, se abrirá WhatsApp con el mensaje preparado. Si no se muestra automáticamente, el mensaje ha sido copiado al portapapeles: puedes pegarlo manualmente en la línea de mensajes de WhatsApp o enviarnos directamente un mensaje dando clic en el ícono de WhatsApp. No olvides adjuntar 
+el formulario con los datos de tu paciente.
       </div>
     </section>
 
